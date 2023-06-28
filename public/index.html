@@ -7,6 +7,21 @@
         <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style.css" rel="stylesheet"></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+        <script>
+        var socket = io();
+
+        socket.on('data', function(data) {
+            // Handle incoming OSC data
+            console.log(data);
+            // Perform any necessary actions with the received data
+        });
+
+        // Add more socket.on() event listeners for other OSC messages
+
+        // Add any other JavaScript code related to your web page
+        </script>
+
     </head>
     <body>
         <span><form id="form" action="">
