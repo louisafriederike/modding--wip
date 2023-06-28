@@ -2,7 +2,7 @@ const osc = require('osc');
 
 // Create an OSC UDP Server listening on port 8080
 const udpPort = new osc.UDPPort({
-  localAddress: '192.168.2.4',
+  localAddress: '192.168.2.1',
   localPort: 8080
 });
 
@@ -25,7 +25,7 @@ function sendOSCMessage(address, data) {
   };
 
   // Send the OSC message to a specific IP address and port
-  udpPort.send(oscMessage, '192.168.2.1', 9000); // Replace with your server IP and port
+  udpPort.send(oscMessage, '192.168.2.4', 9000); // Replace with your server IP and port
 }
 
 // Example usage: Sending an OSC message
